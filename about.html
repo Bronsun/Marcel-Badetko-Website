@@ -10,6 +10,33 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 </head>
+    
+    
+     
+       
+    <script>
+        $(document).ready(function (){
+            $("#arrow").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#scrollTo").offset().top
+                }, 2000);
+            });
+        });
+    </script>
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 <body>
    <div style="background-color: white;" class="sticky">
     <div class="header-logo-small" ><a href="index.html"><img src="logomale.png" style="width: auto; height: auto;max-width: 4.5vw;" ></a></div>
@@ -36,7 +63,7 @@
         pokolenia i urzeczywistnianie idei które kiedyś wydawały się nieosiągalne.
         </div>
     </div>
-    <div id="scroll"></div>
+    <div id="scrollTo"></div>
     <div id="arrow" class="clickable"><a><img src="arrowdown.png" style="max-width: 5vw;"></a></div> 
     <div class="about-more"> Zajmuję się szeroko pojętą branżą architektoniczno-budowlaną:
     <br /><br />
@@ -59,5 +86,5 @@
     
     <div class="credits">Broncel & Rożniata © Copyright 2018. Design by Marcel Badetko</div>
     
-    <script src="scroll.js"></script>
+    
 </body>
