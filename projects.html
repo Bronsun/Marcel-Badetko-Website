@@ -2,7 +2,8 @@
 
 <html>
 	<head>
-		<title>Marcel Badetko</title>
+		<title>Marcel Badetko | Projects</title>
+        <meta name="author" content="Kacper Rozniata & Mateusz Broncel">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" href="style.css">
@@ -24,6 +25,48 @@
             });
         });
     </script>
+           <script>
+// Open the Modal
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>  
         
         
         
@@ -33,9 +76,8 @@
     <ul class="navbar">
         <li><a class="navbar-item clickable noselect" href="about.html">About</a></li>
         <li><a class="navbar-item clickable noselect" href="projects.html">Projects</a></li>
-        <li><a class="navbar-item clickable noselect" href="blog.html">Blog</a></li>
         <li><a class="navbar-item clickable noselect" href="contact.html">Contact</a></li>
-        <li><a class="navbar-item clickable noselect" href="readytobuild.html">Ready to build</a></li>
+        <li><a class="navbar-item clickable noselect" href="readytobulit.html">Ready to build</a></li>
     </ul>   
     <div class="divider"></div>
     </div>
@@ -49,17 +91,17 @@
                         
                             <div class="photobox">
                                 
-                                <img class="photo1" src="FRYZJER%20DAMSKI%20(1).JPG">
+                                <img class="photo1" src="FRYZJER%20DAMSKI%20(1).JPG" onclick="openModal(); currentSlide(1)">
                                 <div class="text1">OMH-SALON FRYZJERSKI</div>
                                 <div class="text-small1">2017</div>
                                 <div class="text-small1">KATOWICE</div>
         
-                                <img class="photo2" src="FRYZJER%20DAMSKI%20(2).JPG" ><br>
+                                <img class="photo2" src="FRYZJER%20DAMSKI%20(2).JPG"  onclick="openModal(); currentSlide(2)"><br>
                                 <div class="text2">OMH-SALON FRYZJERSKI<br>
                                 <div class="text-small2">2017</div><br>
                                 <div class="text-small2">KATOWICE</div></div>
         
-                                <img class="photo3" src="FRYZJER%20DAMSKI.JPG"> 
+                                <img class="photo3" src="FRYZJER%20DAMSKI.JPG" onclick="openModal(); currentSlide(3)"> 
                                 <div class="text3">OMH-SALON FRYZJERSKI <br>
                                 <div class="text-small3">2017</div><br>
                                 <div class="text-small3">KATOWICE</div></div>
@@ -79,17 +121,17 @@
                       
                             <div class="photobox">
         
-                            <img class="photo1" src="BARBERSHOP.JPG">
+                            <img class="photo1" src="BARBERSHOP.JPG" onclick="openModal(); currentSlide(4)">
                             <div class="text1">BUTTERCUT BARBERSHOP</div><br>
                             <div class="text-small1">2017</div>
                             <div class="text-small1">KRAKÓW</div>
         
-                            <img class="photo2" src="BARBERSHOP%202.jpg" ><br>
+                            <img class="photo2" src="BARBERSHOP%202.jpg"  onclick="openModal(); currentSlide(5)" ><br>
                             <div class="text2">BUTTERCUT BARBERSHOP<br>
                             <div class="text-small2">2017</div><br>
                             <div class="text-small2">KRAKÓW</div></div>
         
-                            <img class="photo3" src="BARBERSHOP%203.JPG"> 
+                            <img class="photo3" src="BARBERSHOP%203.JPG" onclick="openModal(); currentSlide(6)"> 
                             <div class="text3">BUTTERCUT BARBERSHOP <br>
                             <div class="text-small3">2017</div><br>
                             <div class="text-small3">KRAKÓW</div></div>
@@ -97,9 +139,52 @@
                             </div>
                       
                 </section>
-          
-    
+             <div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
 
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="FRYZJER%20DAMSKI%20(1).JPG" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="FRYZJER%20DAMSKI%20(2).JPG" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="FRYZJER%20DAMSKI.JPG" style="width:100%">
+    </div>
+      
+        <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="BARBERSHOP.JPG" style="width:100%">
+    </div>
+      
+        <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="BARBERSHOP%202.jpg" style="width:100%">
+    </div>
+      
+        <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="BARBERSHOP%203.JPG" style="width:100%">
+      </div>
+      
+      
+   
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+   
+    
+  </div>
+</div>
+    
+<div class="credits">Broncel & Rożniata © Copyright 2018. Design by Marcel Badetko</div>
     
     </body>
     
