@@ -36,7 +36,7 @@ li a {
 
 .divider {
     width: 100%;
-    border-bottom: 0.04vw solid white;   
+    border-bottom: 0.04vw solid gray;   
 }
 
 .header-logo {
@@ -224,7 +224,7 @@ a:link a:active
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 2vw;
   left: 0;
   top: 0;
   width: 100%;
